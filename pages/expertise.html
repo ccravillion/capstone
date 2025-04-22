@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expertise</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<div id="app">
+<header class="container py-5">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="index.html"><img src="../images/logo.svg" alt="The Invention Group Logo" width="60" height="60"></a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 navLinks">
+                <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="create.html" class="nav-link px-2 link-secondary">Create</a></li>
+                <li><a href="inventions.html" class="nav-link px-2 link-secondary">Inventions</a></li>
+                <li><a href="expertise.html" class="nav-link px-2 link-body-emphasis">Expertise</a></li>
+                <li><a href="process.html" class="nav-link px-2 link-body-emphasis">Process</a></li>
+                <li><a href="about.html" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+            </ul>
+            <div class="headerRightSide">
+                <button type="button" class="btn btn-outline-primary" id="profileBtn" data-toggle="modal" data-target="#loginModal">
+                    <img :src="profileImage" alt="Profile" width="32" height="32" class="rounded-circle">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <profile></profile>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+
+<!--Main Area-->
+<main>
+<div class="container borderedContainer">
+  <h2 class="title">What Makes Us Stand Out?</h2>
+  <p>Innovation starts with a vision—but turning ideas into reality takes strategy, experience, and precision. At The Invention Group,
+    we specialize in guiding inventors through every stage of the creative process, from concept development to market launch. With a
+    deep understanding of patent protection, product design, and commercialization, we transform groundbreaking ideas into successful
+    innovations. Whether you’re refining a prototype, securing intellectual property, or strategizing for industry impact, our
+    expertise ensures your invention is built for success.
+  </p>
+<br>
+  <h2 class="title">Patent & Intellectual Property Protection</h2>
+  <p>Securing intellectual property is crucial for every inventor. With a strategic approach to patents, trademarks, and copyrights,
+    we help innovators safeguard their ideas while navigating the complexities of legal protection in the U.S. and beyond.
+  </p>
+  <br>
+  <h2 class="title">Engineering & Product Development</h2>
+  <p>
+    From initial sketches to working prototypes, our team brings ideas to life through cutting-edge engineering and design. With
+    expertise in material selection, manufacturing processes, and usability optimization, we craft inventions that are both
+    functional and market-ready.
+  </p>
+  <br>
+  <h2 class="title">Licensing & Investment Opportunities</h2>
+  <p>
+    Bringing an invention to life isn’t just about design—it’s about finding the right partners and investors. We guide
+    inventors through licensing agreements, funding strategies, and collaboration opportunities to turn their creations
+    into profitable ventures.
+  </p>
+  <br>
+  <h2 class="title">Thought Leadership & Industry Recognition</h2>
+  <p>
+    With years of experience and a passion for innovation, we don’t just follow industry trends—we set them. Our commitment
+    to pushing boundaries has led to award-winning inventions, media recognition, and collaborations with pioneers in the field.
+  </p>
+</div>
+  <br>
+</main>
+
+
+<!-- Footer -->
+<footer class="container">
+  <div class="row">
+
+    <!-- Logo -->
+    <div class="col-12 col-md footerLogo">
+      <a href="index.html"><img src="../images/logo.svg" alt="The Invention Group Logo" width="200" height="170" class="d-inline-block align-text-top"></a>
+    </div>
+
+    <!-- About Us -->
+    <div class="col-6 col-md footerAboutUs">
+      <div class="card footerCard">
+        <div class="card-body footerCardBody">
+          <h4 class="card-title footerCardTitle">About Us</h4>
+          <ul class="footerList">
+            <li>
+              <a href="about.html" class="card-link footerLink">About</a>
+            </li>
+            <li>
+              <a href="faq.html" class="card-link footerLink">FAQ</a>
+            </li>
+            <li>
+              <a href="contact.html" class="card-link footerLink">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Started -->
+    <div class="col-6 col-md footerGetStarted">
+      <div class="card footerCard">
+        <div class="card-body footerCardBody">
+          <h4 class="card-title footerCardTitle">Get Started</h4>
+          <ul class="footerList">
+            <li>
+              <a href="create.html" class="card-link footerLink">Create</a>
+            </li>
+            <li>
+              <a href="catalogue.html" class="card-link footerLink">Browse Ideas</a>
+            </li>
+            <li>
+              <a href="help.html" class="card-link footerLink">Help Center</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="copyright">@The Invention Group 2025</p>
+</footer>
+</div>
+
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="../js/firebase/firebase.js"></script>
+<script src="../js/firebase/userCollection.js"></script>
+
+<!--Vue and Bootstrap-->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/app.js"></script>
+
+<!--Components-->
+
+<script src="../js/components/login-modal.js"></script>
+<script src="../js/components/profile.js"></script>
+<script src="../js/components/add-invention-form.js"></script>
+<script src="../js/components/invention-list.js"></script>
+<script src="../js/components/invention-list-item.js"></script>
+<script src="../js/components/search.js"></script>
+
+<!--App Mount-->
+<script>
+    app.mount('#app');
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invention Group</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<div id="app">
+        <header class="container py-5">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="index.html" class="headerLogo"><img src="../images/logo.svg" alt="The Invention Group Logo" width="60" height="60"></a>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 navLinks">
+
+                        <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+                        <li><a href="create.html" class="nav-link px-2 link-secondary">Create</a></li>
+                        <li><a href="inventions.html" class="nav-link px-2 link-secondary">Inventions</a></li>
+                        <li><a href="expertise.html" class="nav-link px-2 link-body-emphasis">Expertise</a></li>
+                        <li><a href="process.html" class="nav-link px-2 link-body-emphasis">Process</a></li>
+                        <li><a href="about.html" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+                    </ul>
+                    <div class="headerRightSide">
+                        <button type="button" class="btn btn-outline-primary" id="profileBtn" data-toggle="modal" data-target="#loginModal">
+                            <img :src="profileImage" alt="Profile" width="32" height="32" class="rounded-circle">
+                        </button>
+                    </div>
+                </div>
+            </div>
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Profile</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <profile></profile>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </header>
+        <br>
+
+<!--Main Area-->
+        <main>
+            <div class="container welcomeContainer">
+                <div class="card whiteBG">
+                    <h3 class="card-title title">Welcome to The Invention Group!</h3>
+                        <div class="card-body">
+                            <p class="card-text welcomeTxt">We are the ones who will help you find success through your creations!</p>
+                        </div>
+                    <a class="custom-button">Start your journey</a>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <h3 class="title">Over 40 years of ideas!</h3>
+                        <p class="secondTxt">Here at The Invention Group we have been helping numerous different inventors bring their ideas to life and send the creations from those ideas into the world for everyone to use.  We also keep track of every idea that has come here to inspire other inventors.</p>
+                    </div>
+                    <div class="col-4 inventionCarousel">
+                        <!-- Carousel -->
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/solar-powered-camping-tent-invention.png" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/portable-mini-dishwasher-invention.png" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/edible-coffee-cup-invention.png" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="container inspiredContainer">
+                <div class="row justify-content-between inspiringRow">
+                    <div class="col-4">
+                        <h3 class="title">Looking for Inspiration?</h3>
+                        <p class="inspirationTxt">Take a gander through our extensive catalogue of ideas from other aspiring inventors!</p>
+                    </div>
+                    <div class="col-4">
+                        <a class="custom-button big-button" href="catalogue.html">Unlock your Creativity!</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+            <br>
+
+
+        <!-- Footer -->
+        <footer class="container">
+            <div class="row">
+
+                <!-- Logo -->
+                <div class="col-12 col-md footerLogo">
+                    <a href="index.html"><img src="../images/logo.svg" alt="The Invention Group Logo" width="200" height="170" class="d-inline-block align-text-top"></a>
+                </div>
+
+                <!-- About Us -->
+                <div class="col-6 col-md footerAboutUs">
+                    <div class="card footerCard">
+                        <div class="card-body footerCardBody">
+                            <h4 class="card-title footerCardTitle">About Us</h4>
+                            <ul class="footerList">
+                                <li>
+                                    <a href="about.html" class="card-link footerLink">About</a>
+                                </li>
+                                <li>
+                                    <a href="faq.html" class="card-link footerLink">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" class="card-link footerLink">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get Started -->
+                <div class="col-6 col-md footerGetStarted">
+                    <div class="card footerCard">
+                        <div class="card-body footerCardBody">
+                            <h4 class="card-title footerCardTitle">Get Started</h4>
+                            <ul class="footerList">
+                                <li>
+                                    <a href="create.html" class="card-link footerLink">Create</a>
+                                </li>
+                                <li>
+                                    <a href="catalogue.html" class="card-link footerLink">Browse Ideas</a>
+                                </li>
+                                <li>
+                                    <a href="help.html" class="card-link footerLink">Help Center</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="copyright">@The Invention Group 2025</p>
+        </footer>
+
+</div>
+
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="../js/firebase/firebase.js"></script>
+<script src="../js/firebase/userCollection.js"></script>
+
+<!--Vue and Bootstrap-->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/app.js"></script>
+
+<!--Components-->
+
+<script src="../js/components/login-modal.js"></script>
+<script src="../js/components/profile.js"></script>
+<script src="../js/components/add-invention-form.js"></script>
+<script src="../js/components/invention-list.js"></script>
+<script src="../js/components/invention-list-item.js"></script>
+<script src="../js/components/search.js"></script>
+
+<!--App Mount-->
+<script>
+app.mount('#app');
+</script>
+</body>
+</html>
