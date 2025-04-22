@@ -71,9 +71,6 @@ app.component('invention-list', {
     template: `
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col" v-for="invention in inventions" :key="invention.id">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">{{ invention.name }}</h5>
               <invention-list-item
                   :invention="invention"
                   @delete-invention="deleteInvention(invention.id)"
@@ -81,7 +78,5 @@ app.component('invention-list', {
               ></invention-list-item>
             </div>
           </div>
-        </div>
-      </div>
     `
 });
